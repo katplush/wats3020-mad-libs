@@ -1,99 +1,60 @@
-// WATS 3020 Mad Libs Assignment
-//
-// For this assignment you must fill in the code below so that it functions
-// to populate the text of the "Mad Libs" style story in the HTML.
-//
-// In order to achieve this goal, you will need to write prompt() statements
-// to collect input from the user. The input you collect will be used to
-// generate the story.
-//
-//
-// TODO: Write a prompt statement like the one below for each of the
-// variables listed.
+//Mad Libs Prompts.
 
 let honorific = prompt('Please enter an honorific title (e.g. Mister or Colonel).','Madame');
 
-// Using the same prompt() command, populate the following variables:
-//
-// TODO: A variable named "authorName" for authorial attribution.
-let authorName = prompt('What is your full name?','Kat');
+let authorName = prompt('What is your full name?','Kat Plush');
 
-// TODO: A variable named "adjective1" for a word used to describe something.
 let adjective1 = prompt('Give me a descriptive term','beautiful');
 
-// TODO: A variable named "vehicle" for a mode of transation (e.g. plane, boat, etc.).
 let vehicle = prompt ('Give me a vehicle type','bicycle');
 
-// TODO: A variable named "vehiclePart" for a part of the vehicle you just named.
 let vehiclePart = prompt ('Give me a vehicle part','handle bars');
 
-// TODO: A variable named "parking" for a location where you park the vehicle you just named.
 let parking = prompt ('Give me a location of where you park the vehicle you just named','garage');
 
-// TODO: A variable named "precious" for a precious object.
 let precious = prompt('Give me a precious object','wedding ring');
 
-// TODO: A variable named "noiseMaker" for something that makes a sound.
 let noiseMaker = prompt('Give me an object that makes some sort of sound','harmonica');
 
-// TODO: A variable named "crowdBehavior" for something that people do together as a group.
 let crowdBehavior = prompt('Name a behavior or action that people do together or in a crowd','the wave');
 
-// TODO: A variable named "adjective2" for a word used to describe something.
 let adjective2 = prompt('Give me a descriptive term','muscular');
 
-// TODO: A variable named "adjective3" for a word used to describe something.
-let adjective3 = prompt('Give me a another descriptive term','minuscule');
+let adjective3 = prompt('Give me a another descriptive term','silky smooth');
 
-// TODO: A variable named "color" for the name of a color.
-let color = prompt('Name a color','periwinkle');
+let color = prompt('Name a color','forest green');
 
-// TODO: A variable named "familyMember" for the name of a family relationship (e.g. sister, father, etc.).
 let familyMember = prompt('Name a family member relationship type','second cousin');
 
-// TODO: A variable named "organ" for the name of a body organ (e.g. heart, liver, spleen, etc.).
 let organ = prompt('Give me the name of a body organ','pancreas');
 
-// TODO: A variable named "bodyPart1" for the name of a body part.
 let bodyPart1 = prompt('Give me the name of a body part','elbow');
 
-// TODO: A variable named "bodyPart2" for the name of a body part.
 let bodyPart2 = prompt('Give me the name of another body part','big toe');
 
-// TODO: A variable named "bodyPart3" for the name of a body part.
 let bodyPart3 = prompt('Give me the name of another body part','knee');
 
-// TODO: A variable named "thing" for an object.
 let thing = prompt('Give me an object','shoe');
 
-// TODO: A variable named "thing2" for an object you might give somebody you love.
 let thing2 = prompt('Give me an object that you might give somebody you love','box of chocolates');
 
-// TODO: A variable named "thing3" for an object you might give somebody you like.
 let thing3 = prompt('Give me an object that you might give somebody you like','gift card');
 
-// TODO: A variable named "adjective4" for a word used to describe the vehicle.
 let adjective4 = prompt('Give me a descriptive word for a vehicle','sleek');
 
-// TODO: A variable named "adjective5" for a word used to describe the vehicle.
 let adjective5 = prompt('Give me a descriptive word for a vehicle','shiny');
 
 
 ////////////////////////////////////////////////////////////////////////
 // Section Numbers
 //
-// The poem we are using has section numbers. Let's allow the user to
-// generate their own.
-//
-// TODO: To begin with, prompt the user to collect their favorite number that is not zero.
-// Call this variable "userNumber".
-let userNumber = prompt('Enter your lucky number','7');
 
-// TODO: generate TWO more numbers called "number2" and "number 3".
-// Use any operator you would like to add, multiply, divide, or otherwise
-// change the number that the user submitted.
+let userNumber = prompt('Enter your lucky number; zero not allowed','7');
+
+userNumber = parseInt(userNumber);
+
 let number2 = userNumber + 3;
-let number3 = userNumber/2;
+let number3 = userNumber * 2;
 
 
 
@@ -103,7 +64,7 @@ let number3 = userNumber/2;
 // Please do not edit this code unless you are attempting a stretch goal.
 
 let titleText = `O ${honorific}! My ${honorific}! by <small>${authorName}</small>`;
-let titleHeading = document.querySelector("#madlib-title");
+let titleHeading = document.querySelector('#madlib-title');
 titleHeading.innerHTML = titleText;
 
 let storyText = `
@@ -138,5 +99,5 @@ let storyText = `
     Walk the ${vehiclePart} my ${honorific} lies,
     Fallen ${adjective2} and ${adjective3}.
 `;
-let storyParagraph = document.querySelector("#madlib-text");
+let storyParagraph = document.querySelector('#madlib-text');
 storyParagraph.innerHTML = storyText;
